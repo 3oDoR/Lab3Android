@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:id="@+id/navigation_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <Button
+        android:id="@+id/to_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/to_second"
+        android:layout_marginTop="150dp" />
+
+    <Button
+        android:id="@+id/for_task_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/for_task4"
+        android:layout_marginTop="250dp" />
+
+</FrameLayout>

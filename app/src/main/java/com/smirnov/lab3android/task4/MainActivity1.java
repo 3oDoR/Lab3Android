@@ -1,0 +1,34 @@
+package com.smirnov.lab3android.task4;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.smirnov.lab3android.databinding.ActivityMain1Binding;
+
+public class MainActivity1 extends AppCompatActivity {
+
+    ActivityMain1Binding binding;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        binding = ActivityMain1Binding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.toSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity1.this, MainActivity2.class));
+            }
+        });
+
+        binding.forTask4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity1.this, MainActivity4.class).addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY));
+            }
+        });
+    }
+}

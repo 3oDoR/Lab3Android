@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/task5_first">
+
+    <fragment
+        android:id="@+id/task5_first"
+        android:name="com.smirnov.lab3android.task5.MainActivity1"
+        android:label="fragment_task5_first"
+        tools:layout="@layout/fragment_main1">
+        <action
+            android:id="@+id/action_task5_first_to_task5_second"
+            app:destination="@id/task5_second" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task5_second"
+        android:name="com.smirnov.lab3android.task5.MainActivity2"
+        android:label="fragment_task5_second"
+        tools:layout="@layout/fragment_main2">
+        <action
+            android:id="@+id/action_task5_second_to_task5_first"
+            app:destination="@id/task5_first" />
+        <action
+            android:id="@+id/action_task5_second_to_task5_third"
+            app:destination="@id/task5_third" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/task5_third"
+        android:name="com.smirnov.lab3android.task5.MainActivity3"
+        android:label="fragment_task5_third"
+        tools:layout="@layout/fragment_main3">
+        <action
+            android:id="@+id/action_task5_third_to_task5_second"
+            app:destination="@id/task5_second" />
+        <action
+            android:id="@+id/action_task5_third_to_task5_first"
+            app:destination="@id/task5_first" />
+    </fragment>
+
+    <activity
+        android:id="@+id/activityAbout"
+        android:name="com.smirnov.lab3android.task5.MainActivityAbout"
+        android:label="ActivityAbout" />
+
+</navigation>
